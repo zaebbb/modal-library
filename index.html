@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Modal Window</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./modal-library.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./logo.png">
+        </div>
+        <ul>
+            <li>ABOUT</li>
+            <li>CONTACT</li>
+            <li>TEST MODAL</li>
+            <li>CONTACT</li>
+        </ul>
+    </header>
+    <main>
+        <h1>MODALZAEB</h1>
+        <button class="btn">Test window</button>
+        <button class="btnModal">New window</button>
+    </main>
+
+    <div class="openModal modal">
+        <div class="modal-content">
+            <h1>Модальное окно</h1>
+            <form>
+                <input type="text" placeholder="Ваше имя">
+                <input type="email" placeholder="Ваш E-mail">
+                <input type="text" placeholder="Ваш телефон">
+                <input type="submit" value="ОТПРАВИТЬ">
+            </form>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo animi ex vel magni alias eos? Eos impedit amet sapiente tempore totam unde labore optio ullam asperiores vitae ratione quo repellendus expedita reiciendis illo tempora illum sunt commodi ea a, aliquid, quae ducimus. Laborum voluptas laudantium accusamus blanditiis inventore modi fuga.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos commodi ipsam ad at, possimus eius velit dolores illum ut veniam fuga? Fuga ex minus sint enim quasi corrupti? At dignissimos accusantium earum, nostrum porro ducimus tenetur placeat recusandae consectetur aperiam commodi! Ipsam, odit. Ipsam voluptas ipsum enim consequatur repellendus quisquam, quis id possimus? Nemo laudantium doloribus magni dicta at iure, animi distinctio, iusto facere dolorum temporibus! Dolor suscipit consectetur animi corrupti facilis corporis delectus voluptatum pariatur, maiores exercitationem ea est cupiditate quasi quis eius asperiores voluptas amet rerum veritatis quo autem deleniti distinctio voluptate! Dolores odit consectetur dolorem repellendus tempora!</p>
+        </div>
+    </div>
+    <div class="modal-form modal">
+        <div class="modal-content">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo animi ex vel magni alias eos? Eos impedit amet sapiente tempore totam unde labore optio ullam asperiores vitae ratione quo repellendus expedita reiciendis illo tempora illum sunt commodi ea a, aliquid, quae ducimus. Laborum voluptas laudantium accusamus blanditiis inventore modi fuga.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos commodi ipsam ad at, possimus eius velit dolores illum ut veniam fuga? Fuga ex minus sint enim quasi corrupti? At dignissimos accusantium earum, nostrum porro ducimus tenetur placeat recusandae consectetur aperiam commodi! Ipsam, odit. Ipsam voluptas ipsum enim consequatur repellendus quisquam, quis id possimus? Nemo laudantium doloribus magni dicta at iure, animi distinctio, iusto facere dolorum temporibus! Dolor suscipit consectetur animi corrupti facilis corporis delectus voluptatum pariatur, maiores exercitationem ea est cupiditate quasi quis eius asperiores voluptas amet rerum veritatis quo autem deleniti distinctio voluptate! Dolores odit consectetur dolorem repellendus tempora!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos commodi ipsam ad at, possimus eius velit dolores illum ut veniam fuga? Fuga ex minus sint enim quasi corrupti? At dignissimos accusantium earum, nostrum porro ducimus tenetur placeat recusandae consectetur aperiam commodi! Ipsam, odit. Ipsam voluptas ipsum enim consequatur repellendus quisquam, quis id possimus? Nemo laudantium doloribus magni dicta at iure, animi distinctio, iusto facere dolorum temporibus! Dolor suscipit consectetur animi corrupti facilis corporis delectus voluptatum pariatur, maiores exercitationem ea est cupiditate quasi quis eius asperiores voluptas amet rerum veritatis quo autem deleniti distinctio voluptate! Dolores odit consectetur dolorem repellendus tempora!</p>
+        </div>
+    </div>
+    
+    <script>
+        let newModal = new ModalZAEB('.btn', '.openModal', {
+            // customStyles: false
+        })
+        newModal.init()
+
+        let newModal_2 = new ModalZAEB('.btnModal', '.modal-form', {
+            customBackground: 'rgba(0,255,0,.4)',
+            customBackgroundChild: 'red'
+        })
+        newModal_2.init()
+    </script>
+</body>
+</html>
